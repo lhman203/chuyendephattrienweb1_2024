@@ -1,13 +1,14 @@
 <?php
 require_once 'models/UserModel.php';
+require_once 'helper.php';
 $userModel = new UserModel();
 
 $user = NULL; //Add new user
 $id = NULL;
 
 if (!empty($_GET['id'])) {
-    $id = $_GET['id'];
-    $user = $userModel->findUserById($id);//Update existing user
+    $user_id = decryptUserId($_GET['id']);
+    $user = $userModel->findUserById($user_id);//Update existing user
 }
 
 

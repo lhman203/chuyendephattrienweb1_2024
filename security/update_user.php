@@ -3,7 +3,6 @@
 session_start();
 require_once 'models/UserModel.php';
 require_once 'helper.php';
-
 $userModel = new UserModel();
 
 $user = NULL; //Add new user
@@ -12,6 +11,7 @@ $_id = NULL;
 if (!empty($_GET['id'])) {
     $user_id = decryptUserId($_GET['id']);
     $user = $userModel->findUserById($user_id);//Update existing user
+    $_id = $user_id;
 }
 $error = [];
 
@@ -54,7 +54,7 @@ if (!empty($_POST['submit'])) {
 
         <?php if ($user || !isset($_id)) { ?>
             <div class="alert alert-warning" role="alert">
-                User form
+                User update
             </div>
             <form method="POST">
                 <input type="hidden" name="id" value="<?php echo $_id ?>">
