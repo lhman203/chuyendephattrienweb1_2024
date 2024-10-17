@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FixIt Owner</title>
-    <link rel="stylesheet" href="3083.css">
-    <link rel="stylesheet/less" type="text/css" href="3083.less"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
-</head>
-<body>
-    <div class="container-fluid"> <!-- Full-width container -->
+
+<div class="type-1354">
+
+<!-- <link rel="stylesheet" href="css/1354.css"> -->
+<div class="container-fluid"> <!-- Full-width container -->
         <div class="container"> <!-- Nested container -->
             <div class="row">
                 <div class="col-md-12 text-center"> <!-- Full width row for heading -->
@@ -19,15 +12,15 @@
                     </p>
                 </div>
             </div>
-            <div class="row justify-content-center"> <!-- Row for content -->
-                <div class="col-md-4"> <!-- Sub-width column -->
+            <div class="row  "> <!-- Row for content -->
+                <div class="col-md-6 text-center"> <!-- Sub-width column -->
                     <ul>
                         <li><span>An entrepreneurial spirit who sees the big picture.</span></li>
                         <li><span>A hardworking nature and a positive attitude.</span></li>
                         <li><span>A person who will put customers above all else.</span></li>
                     </ul>
                 </div>
-                <div class="col-md-4"> <!-- Another sub-width column -->
+                <div class="col-md-6 text-center"> <!-- Another sub-width column -->
                     <ul>
                         <li><span>An entrepreneurial spirit who sees the big picture.</span></li>
                         <li><span>A hardworking nature and a positive attitude.</span></li>
@@ -37,9 +30,5 @@
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+</div>
+s

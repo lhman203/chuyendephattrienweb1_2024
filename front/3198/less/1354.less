@@ -1,0 +1,115 @@
+@dark-color: #000;
+@light-color: #fff;
+
+body {
+    
+    background-color: @light-color;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Các selector khác không nên lồng trực tiếp vào body */
+
+h1 {
+    margin: 30px 0;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif; /* Áp dụng font Urbanist */
+    font-weight: 600;
+}
+
+form {
+    padding: 20px;
+    background-color: @light-color;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto; /* Giúp form luôn ở giữa màn hình */
+}
+
+input,
+textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho viền */
+
+    &:hover,
+    &:focus {
+        border: 1px solid @dark-color; /* Thay đổi viền thành đen khi hover hoặc focus */
+        outline: none; /* Loại bỏ viền mặc định khi focus */
+    }
+}
+
+textarea {
+    resize: vertical; /* Cho phép kéo giãn chiều dọc */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+
+    button {
+        background-color: @dark-color;
+        color: @light-color;
+        border: none;
+        padding: 10px;
+        font-size: 1em;
+        cursor: pointer;
+        height: 44px;
+        margin-top: 10px;
+        padding: 0 35px; /* Đảm bảo khoảng cách ngang đều */
+        /* width: 100%; */ /* Đã được comment đúng */
+    }
+
+    button:hover {
+        background-color: lighten(@dark-color, 10%); /* Sử dụng hàm lighten đúng cú pháp */
+    }
+}
+
+/* Responsive cho các màn hình nhỏ hơn 768px (Mobile) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    form {
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9em;
+    }
+
+    .btn-container button {
+        font-size: 0.9em;
+    }
+}
+
+/* Responsive cho các màn hình nhỏ hơn 480px (Smartphone nhỏ) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+        margin: 20px 0;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    input,
+    textarea {
+        font-size: 0.8em;
+    }
+
+    .btn-container button {
+        font-size: 0.8em;
+    }
+}
